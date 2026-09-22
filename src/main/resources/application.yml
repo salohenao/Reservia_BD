@@ -1,0 +1,29 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: backend
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/reservas_db}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:12345678}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # 'update' es comodo para desarrollo (Sprint 1). Para produccion, cambiar a
+      # 'validate' y manejar el esquema con una herramienta de migraciones (Flyway/Liquibase).
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+
+app:
+  jwt:
+    # Debe tener al menos 32 caracteres (HS256 exige una clave de 256 bits / 32 bytes).
+    secret: ${JWT_SECRET:cambia-esto-por-un-secreto-largo-y-aleatorio-de-32+caracteres}
+    expiration-ms: ${JWT_EXPIRATION_MS:604800000} # 7 dias
+  cors:
+    allowed-origin: ${CORS_ALLOWED_ORIGIN:http://localhost:3000}
