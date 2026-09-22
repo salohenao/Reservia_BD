@@ -7,9 +7,9 @@ spring:
   application:
     name: backend
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/reservas_db}
-    username: ${DATABASE_USER:postgres}
-    password: ${DATABASE_PASSWORD:12345678}
+    url: ${DATABASE_URL:jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres}
+    username: ${DATABASE_USER:postgres.eaybgobsqvatcmbhpdtw}
+    password: ${DATABASE_PASSWORD}
   jpa:
     open-in-view: false
     hibernate:
