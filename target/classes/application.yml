@@ -9,7 +9,7 @@ spring:
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres}
     username: ${DATABASE_USER:postgres.eaybgobsqvatcmbhpdtw}
-    password: ${DATABASE_PASSWORD:Reservia2026.}
+    password: ${DATABASE_PASSWORD}
   jpa:
     open-in-view: false
     hibernate:
