@@ -15,7 +15,7 @@ spring:
     hibernate:
       # 'update' es comodo para desarrollo (Sprint 1). Para produccion, cambiar a
       # 'validate' y manejar el esquema con una herramienta de migraciones (Flyway/Liquibase).
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         format_sql: false
